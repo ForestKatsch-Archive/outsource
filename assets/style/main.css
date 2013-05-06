@@ -1,0 +1,30 @@
+
+@import "http://fonts.googleapis.com/css?family=Roboto+Slab:400,300";
+
+@import "reset.css";
+@import "header.css";
+@import "employees.css";
+@import "footer.css";
+
+html, body {
+    width: 100%;
+}
+
+html {
+    background-color: #ddd;
+    font-family: Roboto Slab, sans-serif;
+}
+
+#wrapper {
+    background-color: #333;
+    border-radius: 0 0 4px 4px;
+    margin: 0 auto;
+    padding: 10px;
+    width: 640px;
+}
+
+p {
+    color: #ddd;
+    font-size: 80%;
+    margin-bottom: 10px;
+}

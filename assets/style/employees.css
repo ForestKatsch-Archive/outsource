@@ -1,0 +1,35 @@
+
+#employees {
+    background-color: #333;
+    border-radius: 4px 0 0 4px;
+    padding: 10px;
+    position: absolute;
+    top: 5em;
+    right: 0;
+}
+
+#employees .employee {
+    color: #ddd;
+    list-style-type: none;
+}
+
+.employee + .employee {
+    margin-top: 10px;
+}
+
+.employee > * {
+
+}
+
+.employee .name {
+    font-weight: bold;
+}
+
+.employee .job {
+    color: #bbb;
+    padding: 0 5px;
+}
+
+.employee .salary {
+    color: #8f8;
+}
