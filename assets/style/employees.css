@@ -2,19 +2,31 @@
 #employees {
     background-color: #333;
     border-radius: 4px 0 0 4px;
-    padding: 10px;
+    box-shadow: 0 0 0 2px #ddd;
     position: absolute;
     top: 5em;
     right: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
-#employees .employee {
+.employee {
     color: #ddd;
     list-style-type: none;
+    padding: 10px;
+}
+
+#employees .employee:last-child {
+    border-bottom-left-radius: 4px;
+}
+
+#employees .employee:first-child {
+    border-top-left-radius: 4px;
 }
 
 .employee + .employee {
-    margin-top: 10px;
+
 }
 
 .employee > * {
@@ -33,3 +45,47 @@
 .employee .salary {
     color: #8f8;
 }
+
+.employee:hover {
+    background-color: #37a;
+    cursor: pointer;
+}
+
+.employee.selected {
+    background-color: #888;
+    position: relative;
+}
+
+.employee:hover .name {
+    color: #fff;
+}
+
+.employee:hover .job {
+    color: #ddd;
+}
+
+.employee:hover .salary {
+    color: #6f6;
+}
+
+.employee.selected * {
+    color: #fff;
+}
+
+.employee.selected .salary {
+    color: #3f3;
+}
+
+.employee.selected:before {
+    background-color: #888;
+    border-radius: 4px 0 0 4px;
+    content:"";
+    display: block;
+    padding: 10px 0;
+    position: absolute;
+    height: 1em;
+    top: 0;
+    left: -1em;
+    width: 1em;
+}
+

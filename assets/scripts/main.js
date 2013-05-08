@@ -1,14 +1,7 @@
 
-function s(i) {
-    if(i == 1)
-	return "";
-    else
-	return "s";
-}
-
 var VERSION=[0,0,1];
 
-var modules=["main","ui","tower","employees"];
+var modules=["main","ui","tower","employees","buyers"];
 var module_number=0;
 var module_start_time;
 
@@ -35,14 +28,19 @@ function init() {
     modules=m;
 }
 
-window.onload=function() {
+function start() {
     init();
     setTimeout(function() {
 	ui_init();
 	tower_init();
+	buyers_init();
 	employees_init();
 	loaded("main");
     },0);
+}
+
+window.onload=function() {
+    start();
 };
 
 function done() {
@@ -55,6 +53,7 @@ function done() {
 function update() {
     requestAnimationFrame(update);
     tower_update();
+    buyers_update();
     employees_update();
     ui_update();
 }

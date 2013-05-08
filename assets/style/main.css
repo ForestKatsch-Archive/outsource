@@ -4,6 +4,7 @@
 @import "reset.css";
 @import "header.css";
 @import "employees.css";
+@import "info.css";
 @import "footer.css";
 
 html, body {
@@ -21,6 +22,16 @@ html {
     margin: 0 auto;
     padding: 10px;
     width: 640px;
+}
+
+canvas {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+canvas.employee-selected:hover {
+    cursor: crosshair;
 }
 
 p {

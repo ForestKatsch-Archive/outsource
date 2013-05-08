@@ -1,0 +1,17 @@
+
+#info {
+    color: #fff;
+    font-size: 140%;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#info .money {
+    color: #6f6;
+}
+
+#info .money.unpaid {
+    color: #f66;
+}
